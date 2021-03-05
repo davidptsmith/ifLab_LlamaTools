@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EE69F46B-CEE7-4D0A-9802-0A10153838B9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ifLab_LlamaTools</RootNamespace>
+    <AssemblyName>ifLab_LlamaTools</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="RhinoCommon">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Rhino 6\System\rhinocommon.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Grasshopper">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Rhino 6\Plug-ins\Grasshopper\Grasshopper.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="GH_IO">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Rhino 6\Plug-ins\Grasshopper\GH_IO.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Components\Layouts\AddDetailView.cs" />
+    <Compile Include="Components\Layouts\CreateLayouts.cs" />
+    <Compile Include="Components\Layouts\DuplicateLayout.cs" />
+    <Compile Include="Components\Layouts\GetTextOnLayout.cs" />
+    <Compile Include="Components\Layouts\UpdateText.cs" />
+    <Compile Include="Components\Layouts\DeleteLayout.cs" />
+    <Compile Include="Components\Layouts\EditDetail.cs" />
+    <Compile Include="Components\Layouts\GetDetailsOnPage.cs" />
+    <Compile Include="Components\Layouts\GetLayouts.cs" />
+    <Compile Include="Components\Layouts\NamedView.cs" />
+    <Compile Include="Components\Layouts\NamingDetails.cs" />
+    <Compile Include="Components\Utilities\AdvancedText.cs" />
+    <Compile Include="Components\Utilities\PrintToPdf.cs" />
+    <Compile Include="Components\Utilities\EditTextStyle.cs" />
+    <Compile Include="Components\Utilities\GrasshopperExporter.cs" />
+    <Compile Include="Components\Utilities\TextScaling.cs" />
+    <Compile Include="Components\Utilities\UpdateValuesLists.cs" />
+    <Compile Include="ifLabLlamaToolsComponent.cs" />
+    <Compile Include="ifLab_LlamaToolsInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\IconResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IconResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Components\Excel Editor\Functions\" />
+    <Folder Include="Components\Layouts\Functions\" />
+    <Folder Include="Components\Sheet Metal\Functions\" />
+    <Folder Include="Components\Utilities\Functions\" />
+    <Folder Include="Core\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\IconResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>IconResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 1 copy 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 1 copy 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 1 copy 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 1 copy 5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 1 copy 6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 1 copy 7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 1 copy 8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 1 copy 9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 1 copy 10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 1 copy 11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CreateLayout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleyeLayout-08.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DuplicateLayout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditDetailView-10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditText.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExportCAD-11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FindDetailView-09.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FindText.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iflab.icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rouding Numbers%403x.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>Copy "$(TargetPath)" "$(TargetDir)$(ProjectName).gha"
+Erase "$(TargetPath)"</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <FallbackCulture>en-US</FallbackCulture>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartProgram>C:\Program Files\Rhino 6\System\Rhino.exe</StartProgram>
+    <StartArguments>
+    </StartArguments>
+    <StartAction>Program</StartAction>
+  </PropertyGroup>
+</Project>
