@@ -5,7 +5,7 @@ These tools are to make documenting complex projects more efficient. Other scrip
 
 <br/>
 
-![image](https://user-images.githubusercontent.com/76982323/158522345-6b2df24f-6844-4b54-8a75-7697f455fa22.png)
+![image](https://user-images.githubusercontent.com/76982323/158522345-6b2df24f-6844-4b54-8a75-7697f455fa22.png)  { width: 200px; }
 
 
 
