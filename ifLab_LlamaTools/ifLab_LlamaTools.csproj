@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -10,9 +10,12 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ifLab_LlamaTools</RootNamespace>
     <AssemblyName>ifLab_LlamaTools</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
@@ -32,47 +35,52 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="GH_IO">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\Rhino 7\Plug-ins\Grasshopper\GH_IO.dll</HintPath>
+    </Reference>
+    <Reference Include="Grasshopper">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\Rhino 7\Plug-ins\Grasshopper\Grasshopper.dll</HintPath>
+    </Reference>
+    <Reference Include="RhinoCommon">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\Rhino 7\System\RhinoCommon.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="RhinoCommon">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\Rhino 6\System\rhinocommon.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Grasshopper">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\Rhino 6\Plug-ins\Grasshopper\Grasshopper.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="GH_IO">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\Rhino 6\Plug-ins\Grasshopper\GH_IO.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Components\Layouts\AddDetailView.cs" />
-    <Compile Include="Components\Layouts\CreateLayouts.cs" />
-    <Compile Include="Components\Layouts\DuplicateLayout.cs" />
-    <Compile Include="Components\Layouts\GetTextOnLayout.cs" />
-    <Compile Include="Components\Layouts\UpdateText.cs" />
-    <Compile Include="Components\Layouts\DeleteLayout.cs" />
-    <Compile Include="Components\Layouts\EditDetail.cs" />
-    <Compile Include="Components\Layouts\GetDetailsOnPage.cs" />
-    <Compile Include="Components\Layouts\GetLayouts.cs" />
-    <Compile Include="Components\Layouts\NamedView.cs" />
-    <Compile Include="Components\Layouts\NamingDetails.cs" />
-    <Compile Include="Components\Utilities\AdvancedText.cs" />
-    <Compile Include="Components\Utilities\PrintToPdf.cs" />
-    <Compile Include="Components\Utilities\EditTextStyle.cs" />
-    <Compile Include="Components\Utilities\GrasshopperExporter.cs" />
-    <Compile Include="Components\Utilities\TextScaling.cs" />
-    <Compile Include="Components\Utilities\UpdateValuesLists.cs" />
+    <Compile Include="Components\Layouts\CreateLayouts\CreateLayouts_GHC.cs" />
+    <Compile Include="Components\Layouts\CreateLayouts\LayoutObject.cs" />
+    <Compile Include="Components\Layouts\00_SUP\DuplicateLayout.cs" />
+    <Compile Include="Components\Layouts\UpdateTextOnLayouts\UpdateTextOnLayouts_GHC.cs" />
+    <Compile Include="Components\Layouts\GetTextOnLayouts\GetTextOnLayout_GHC.cs" />
+    <Compile Include="Components\Layouts\UpdateText\UpdateText_GHC.cs" />
+    <Compile Include="Components\Layouts\DeleteDetails\DeleteLayout_GHC.cs" />
+    <Compile Include="Components\Layouts\UpdateDetailsOnLayouts\UpdateDetailsOnLayouts_GHC.cs" />
+    <Compile Include="Components\Layouts\GetDetailsOnLayout\GetDetailsOnPage_GHC.cs" />
+    <Compile Include="Components\Layouts\GetLayouts\GetLayouts_GHC.cs" />
+    <Compile Include="Components\Layouts\00_SUP\NamedView.cs" />
+    <Compile Include="Components\Layouts\00_SUP\NamingDetails.cs" />
+    <Compile Include="Components\Layouts\Utilities\LayoutHelperFunctions.cs" />
+    <Compile Include="Components\Sheet Metal\K Factor Brep Stretching\KfactorBrepStrechingObj.cs" />
+    <Compile Include="Components\Sheet Metal\K Factor Brep Stretching\KFactorBrepStretching.cs" />
+    <Compile Include="Components\Utilities\AdvancedText_GHC.cs" />
+    <Compile Include="Components\Utilities\PrintToPdf_GHC.cs" />
+    <Compile Include="Components\Utilities\EditTextStyle_GHC.cs" />
+    <Compile Include="Components\Utilities\GrasshopperExporter_GHC.cs" />
+    <Compile Include="Components\Utilities\TextScaling_GHC.cs" />
+    <Compile Include="Components\Utilities\UpdateValuesLists_GHC.cs" />
+    <Compile Include="Core\ComponentInputs\InputFunctions.cs" />
+    <Compile Include="Core\ComponentInputs\InputObject.cs" />
+    <Compile Include="Core\ComponentInputs\StandardComponentInputs.cs" />
+    <Compile Include="Core\RibbonLayout.cs" />
     <Compile Include="ifLabLlamaToolsComponent.cs" />
     <Compile Include="ifLab_LlamaToolsInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -87,43 +95,17 @@
     <Folder Include="Components\Layouts\Functions\" />
     <Folder Include="Components\Sheet Metal\Functions\" />
     <Folder Include="Components\Utilities\Functions\" />
-    <Folder Include="Core\" />
+    <Folder Include="Core\StaticAutoPopulate\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\IconResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>IconResources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Artboard 1 copy 2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Artboard 1 copy 3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Artboard 1 copy 4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Artboard 1 copy 5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Artboard 1 copy 6.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Artboard 1 copy 7.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Artboard 1 copy 8.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Artboard 1 copy 9.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Artboard 1 copy 10.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Artboard 1 copy 11.png" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\CreateLayout.png" />
@@ -152,9 +134,6 @@
   <ItemGroup>
     <None Include="Resources\iflab.icon.png" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Rouding Numbers%403x.png" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
@@ -176,4 +155,13 @@ Erase "$(TargetPath)"</PostBuildEvent>
     </StartArguments>
     <StartAction>Program</StartAction>
   </PropertyGroup>
+  <Import Project="..\packages\Grasshopper.7.14.22010.17001\build\Grasshopper.targets" Condition="Exists('..\packages\Grasshopper.7.14.22010.17001\build\Grasshopper.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Grasshopper.7.14.22010.17001\build\Grasshopper.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Grasshopper.7.14.22010.17001\build\Grasshopper.targets'))" />
+    <Error Condition="!Exists('..\packages\RhinoCommon.7.14.22010.17001\build\RhinoCommon.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\RhinoCommon.7.14.22010.17001\build\RhinoCommon.targets'))" />
+  </Target>
+  <Import Project="..\packages\RhinoCommon.7.14.22010.17001\build\RhinoCommon.targets" Condition="Exists('..\packages\RhinoCommon.7.14.22010.17001\build\RhinoCommon.targets')" />
 </Project>
