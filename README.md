@@ -5,11 +5,11 @@ These tools are to make documenting complex projects more efficient. Other scrip
 
 <br/>
 
-![image](https://user-images.githubusercontent.com/76982323/158522345-6b2df24f-6844-4b54-8a75-7697f455fa22.png)  { width: 200px; }
+<img src="https://user-images.githubusercontent.com/76982323/158522345-6b2df24f-6844-4b54-8a75-7697f455fa22.png' width=100% />
 
 
 
-![image](https://user-images.githubusercontent.com/76982323/158522281-2a0b914b-f72c-4c50-8754-1a5bc9c0bd75.png)
+[[![image](https://user-images.githubusercontent.com/76982323/158522281-2a0b914b-f72c-4c50-8754-1a5bc9c0bd75.png)|width=200px]]
 
 ![image](https://user-images.githubusercontent.com/76982323/158522379-58f75ff3-22bb-4f68-b5db-dd94f8066aa3.png)
 
